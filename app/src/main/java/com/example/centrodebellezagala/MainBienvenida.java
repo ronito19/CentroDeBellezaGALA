@@ -15,7 +15,8 @@ public class MainBienvenida extends AppCompatActivity {
     }
 
 
-    public void ir_al_logueo(View view) {
+    public void ir_al_logueo(View view)
+    {
         Intent intent = new Intent(this, MainRegistro.class);
         startActivity(intent);
     }
