@@ -1,8 +1,4 @@
 package com.example.centrodebellezagala;
 
-public class MainSecciones
-{
-
-
-
+public class MainRegistrate {
 }

@@ -10,7 +10,6 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.centrodebellezagala.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -42,7 +41,7 @@ public class MainRegistro extends AppCompatActivity
     }
 
 
-    @Override
+    /*@Override
     public void onStart()
     {
         super.onStart();
@@ -52,7 +51,7 @@ public class MainRegistro extends AppCompatActivity
         {
             currentUser.reload();
         }
-    }
+    }*/
 
 
     public void ir_a_iniciaSesion(View view)
@@ -66,15 +65,15 @@ public class MainRegistro extends AppCompatActivity
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             Log.i("firebasedb", "signInWithEmail:success");
-                            Toast.makeText(MainRegistro.this, "signInWithEmail:failure", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(MainRegistro.this, "signInWithEmail:exito", Toast.LENGTH_SHORT).show();
                             FirebaseUser user = mAuth.getCurrentUser();
                             //updateUI(user);
-                            Intent intent = new Intent(MainRegistro.this, MainSecciones.class);
+                            Intent intent = new Intent(MainRegistro.this, MainRegistrate.class);
                             startActivity(intent);
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.i("firebasedb", "signInWithEmail:failure", task.getException());
-                            Toast.makeText(MainRegistro.this, "signInWithEmail:failure", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(MainRegistro.this, "signInWithEmail:malo", Toast.LENGTH_SHORT).show();
                             // updateUI(null);
                         }
                     }
@@ -100,7 +99,7 @@ public class MainRegistro extends AppCompatActivity
                             Toast.makeText(MainRegistro.this, "signInWithEmail:failure", Toast.LENGTH_SHORT).show();
                             FirebaseUser user = mAuth.getCurrentUser();
                             //updateUI(user);
-                            Intent intent = new Intent(MainRegistro.this, MainSecciones.class);
+                            Intent intent = new Intent(MainRegistro.this, MainRegistrate.class);
                             startActivity(intent);
                         }
                         else
